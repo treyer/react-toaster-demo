@@ -1,7 +1,7 @@
 import { Wrapper } from "./components";
 
-function SettingsGroupWrapper() {
-  return <Wrapper variant="outlined"></Wrapper>;
+function SettingsGroupWrapper({ children }) {
+  return <Wrapper variant="outlined">{children}</Wrapper>;
 }
 
 export default SettingsGroupWrapper;

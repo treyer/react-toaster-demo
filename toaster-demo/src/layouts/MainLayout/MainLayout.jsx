@@ -4,7 +4,6 @@ import Header from "../../components/Header/Header";
 import CodeDemo from "../../components/CodeDemo/CodeDemo";
 import SettingsMenu from "../../components/SettingsMenu/SettingsMenu";
 import Footer from "../../components/Footer/Footer";
-import SettingsGroupWrapper from "../../components/SettingsGroupWrapper/SettingsGroupWrapper";
 
 function MainLayout() {
   return (
@@ -15,9 +14,7 @@ function MainLayout() {
       <InnerWrapper>
         <main>
           <CodeDemo />
-          <SettingsMenu>
-            <SettingsGroupWrapper></SettingsGroupWrapper>
-          </SettingsMenu>
+          <SettingsMenu />
         </main>
       </InnerWrapper>
       <InnerWrapper>
