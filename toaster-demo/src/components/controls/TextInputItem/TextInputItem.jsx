@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 
 import { ErrorMessage, Input, Wrapper } from "./components";
 
+import { SIZE_LARGE, SIZE_SMALL } from "../../../constants/sizes";
+
 function TextInputItem({ id, size, label, defaultValue }) {
   return (
     <Wrapper>
@@ -15,13 +17,13 @@ function TextInputItem({ id, size, label, defaultValue }) {
 
 TextInputItem.propTypes = {
   id: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(["small", "large"]),
+  size: PropTypes.oneOf([SIZE_SMALL, SIZE_LARGE]),
   label: PropTypes.string.isRequired,
   defaultValue: PropTypes.string.isRequired,
 };
 
 TextInputItem.defaultProps = {
-  size: "small",
+  size: SIZE_SMALL,
 };
 
 export { TextInputItem };

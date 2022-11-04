@@ -5,11 +5,9 @@ import { AnimationTypeMenu } from "../AnimationTypeMenu";
 import { ToastShowTypeMenu } from "../ToastShowTypeMenu";
 import { ToastHideTypeMenu } from "../ToastHideTypeMenu";
 import { ContainerPositionMenu } from "../ContainerPositionMenu";
-import { BgColorPicker } from "../BgColorPicker";
-import { FontColorPicker } from "../FontColorPicker";
-import { IconColorPicker } from "../IconColorPicker";
 import { TextInputPanel } from "../TextInputPanel";
 import { IndentsInputPanel } from "../IndentsInputPanel";
+import { ColorPanel } from "../ColorPanel";
 
 function SettingsMenu() {
   return (
@@ -33,15 +31,7 @@ function SettingsMenu() {
       <SettingsGroupWrapper>
         <ToastHideTypeMenu />
       </SettingsGroupWrapper>
-      <SettingsGroupWrapper>
-        <BgColorPicker />
-      </SettingsGroupWrapper>
-      <SettingsGroupWrapper>
-        <FontColorPicker />
-      </SettingsGroupWrapper>
-      <SettingsGroupWrapper>
-        <IconColorPicker />
-      </SettingsGroupWrapper>
+      <ColorPanel />
       <IndentsInputPanel />
     </>
   );

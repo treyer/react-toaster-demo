@@ -1,1 +1,0 @@
-export { IconColorPicker } from "./IconColorPicker";

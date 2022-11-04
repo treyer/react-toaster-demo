@@ -3,6 +3,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 export const Title = styled(Typography)`
+  margin-left: 70px;
+
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 400;
