@@ -24,7 +24,7 @@ import {
 } from "../../constants";
 
 const INITIAL_STATE = {
-  containerPosition: POSITION_TYPE.TOP_RIGHT,
+  containerPosition: POSITION_TYPE.TOP_LEFT,
   text: "Hello from toast!!!",
   headerText: "Awesome header",
   type: TOAST_TYPES.DEFAULT,
@@ -44,7 +44,7 @@ export default handleActions(
     [changeContainerPosition]: (state, action) => {
       return {
         ...state,
-        text: action.payload,
+        containerPosition: action.payload,
       };
     },
     [changeText]: (state, action) => {
@@ -116,7 +116,7 @@ export default handleActions(
     [changeAnimationType]: (state, action) => {
       return {
         ...state,
-        padding: action.payload,
+        animationType: action.payload,
       };
     },
   },

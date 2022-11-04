@@ -5,3 +5,4 @@ export * from "./indents";
 export * from "./positions";
 export * from "./toastTypes";
 export * from "./sizes";
+export * from "./texts";
