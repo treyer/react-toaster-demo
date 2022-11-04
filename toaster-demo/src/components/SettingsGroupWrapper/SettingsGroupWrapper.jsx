@@ -4,4 +4,4 @@ function SettingsGroupWrapper({ children }) {
   return <Wrapper variant="outlined">{children}</Wrapper>;
 }
 
-export default SettingsGroupWrapper;
+export { SettingsGroupWrapper };

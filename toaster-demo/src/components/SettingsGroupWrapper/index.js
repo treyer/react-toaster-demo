@@ -1,1 +1,1 @@
-export * from "./SettingsGroupWrapper";
+export { SettingsGroupWrapper } from "./SettingsGroupWrapper";
