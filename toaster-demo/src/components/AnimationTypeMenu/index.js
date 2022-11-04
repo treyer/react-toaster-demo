@@ -1,1 +1,0 @@
-export { AnimationTypeMenu } from "./AnimationTypeMenu";
