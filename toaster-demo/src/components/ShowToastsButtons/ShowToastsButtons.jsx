@@ -6,7 +6,7 @@ import { GroupWrapper } from "./components";
 function ShowToastsButtons() {
   return (
     <SettingsGroupWrapper>
-      <GroupWrapper variant="outlined" size="large">
+      <GroupWrapper variant="contained" size="large">
         <Button color="secondary">Custom</Button>
       </GroupWrapper>
       <GroupWrapper variant="outlined" size="large">
