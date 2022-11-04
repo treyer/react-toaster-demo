@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import CodeDemo from "../../components/CodeDemo/CodeDemo";
 import SettingsMenu from "../../components/SettingsMenu/SettingsMenu";
 import Footer from "../../components/Footer/Footer";
+import { ErrorBoundary } from "../../components/ErrorBoundary";
 
 function MainLayout() {
   return (
@@ -13,8 +14,10 @@ function MainLayout() {
       </InnerWrapper>
       <InnerWrapper>
         <main>
-          <CodeDemo />
-          <SettingsMenu />
+          <ErrorBoundary>
+            <CodeDemo />
+            <SettingsMenu />
+          </ErrorBoundary>
         </main>
       </InnerWrapper>
       <InnerWrapper>
