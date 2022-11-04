@@ -1,32 +1,21 @@
 import { SettingsGroupWrapper } from "../SettingsGroupWrapper";
-import { ErrorMessage, Input, PanelWrapper, Wrapper } from "./components";
+import { TextInputItem } from "../controls/TextInputItem";
+import { PanelWrapper } from "./components";
 
 function IndentsInputPanel() {
   return (
     <SettingsGroupWrapper>
       <PanelWrapper>
-        <Wrapper>
-          <Input
-            id="toast-margin"
-            size="small"
-            label="Custom toast margins"
-            defaultValue=""
-          />
-          <ErrorMessage variant="caption" color="red">
-            Wrong entry
-          </ErrorMessage>
-        </Wrapper>
-        <Wrapper>
-          <Input
-            id="toast-header-text"
-            size="small"
-            label="Custom toast paddings"
-            defaultValue=""
-          />
-          <ErrorMessage variant="caption" color="red">
-            Wrong entry
-          </ErrorMessage>
-        </Wrapper>
+        <TextInputItem
+          id="toast-margin"
+          label="Custom toast margins"
+          defaultValue=""
+        />
+        <TextInputItem
+          id="toast-paddings"
+          label="Custom toast paddings"
+          defaultValue=""
+        />
       </PanelWrapper>
     </SettingsGroupWrapper>
   );
