@@ -8,9 +8,8 @@ import { ContainerPositionMenu } from "../ContainerPositionMenu";
 import { BgColorPicker } from "../BgColorPicker";
 import { FontColorPicker } from "../FontColorPicker";
 import { IconColorPicker } from "../IconColorPicker";
-import { ToastMarginInput } from "../ToastMarginInput";
-import { ToastPaddingInput } from "../ToastPaddingInput";
 import { TextInputPanel } from "../TextInputPanel";
+import { IndentsInputPanel } from "../IndentsInputPanel";
 
 function SettingsMenu() {
   return (
@@ -43,12 +42,7 @@ function SettingsMenu() {
       <SettingsGroupWrapper>
         <IconColorPicker />
       </SettingsGroupWrapper>
-      <SettingsGroupWrapper>
-        <ToastMarginInput />
-      </SettingsGroupWrapper>
-      <SettingsGroupWrapper>
-        <ToastPaddingInput />
-      </SettingsGroupWrapper>
+      <IndentsInputPanel />
     </>
   );
 }
