@@ -31,11 +31,11 @@ const INITIAL_STATE = {
   lifeTime: 0,
   showFrom: SHOW_FROM.RIGHT,
   hideTo: HIDE_TO.RIGHT,
-  bgColor: "",
-  fontColor: "",
-  iconColor: "",
-  margin: "",
-  padding: "",
+  bgColor: null,
+  fontColor: null,
+  iconColor: null,
+  margin: null,
+  padding: null,
   animationType: ANIMATION_TYPES.EASE_IN_OUT,
 };
 

@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import Button from "@mui/material/Button";
 import { toaster } from "react-toaster-lib";
 
@@ -8,6 +9,17 @@ import { DEFAULT_HEADER, DEFAULT_TEXT } from "../../constants/texts";
 import { TOAST_TYPES } from "../../constants/toastTypes";
 
 function ShowToastsButtons() {
+  const { settings } = useSelector((state) => state);
+
+  const showCustomToast = () => {
+    const { text, headerText, ...rest } = settings;
+    delete rest.containerPosition;
+    Object.entries(rest).forEach((el) => {
+      if (el[1] === null) delete rest[el[0]];
+    });
+    toaster.addToast(text, headerText, { ...rest });
+  };
+
   const showDefaultToast = () => {
     toaster.addToast(DEFAULT_TEXT, DEFAULT_HEADER, { lifeTime: 2000 });
   };
@@ -39,7 +51,9 @@ function ShowToastsButtons() {
   return (
     <SettingsGroupWrapper>
       <GroupWrapper variant="contained" size="large">
-        <Button color="secondary">Custom</Button>
+        <Button color="secondary" onClick={showCustomToast}>
+          Custom
+        </Button>
       </GroupWrapper>
       <GroupWrapper variant="outlined" size="large">
         <Button color="primary" onClick={showDefaultToast}>
