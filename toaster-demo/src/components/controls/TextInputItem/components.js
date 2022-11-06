@@ -1,7 +1,6 @@
 import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 
 export const Wrapper = styled(Box)`
   display: flex;
@@ -13,8 +12,4 @@ export const Wrapper = styled(Box)`
 export const Input = styled(TextField)`
   width: 400px;
   margin: 5px 0;
-`;
-
-export const ErrorMessage = styled(Typography)`
-  padding-left: 10px;
 `;

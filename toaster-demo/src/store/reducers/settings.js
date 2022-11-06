@@ -34,8 +34,8 @@ const INITIAL_STATE = {
   bgColor: null,
   fontColor: null,
   iconColor: null,
-  margin: null,
-  padding: null,
+  margin: "",
+  padding: "",
   animationType: ANIMATION_TYPES.EASE_IN_OUT,
 };
 
