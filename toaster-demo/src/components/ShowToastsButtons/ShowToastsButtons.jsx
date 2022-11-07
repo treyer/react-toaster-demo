@@ -15,13 +15,16 @@ function ShowToastsButtons() {
     const { text, headerText, ...rest } = settings;
     delete rest.containerPosition;
     Object.entries(rest).forEach((el) => {
-      if (el[1] === null) delete rest[el[0]];
+      if (el[1] === null || el[1] === "") delete rest[el[0]];
     });
     toaster.addToast(text, headerText, { ...rest });
   };
 
   const showDefaultToast = () => {
-    toaster.addToast(DEFAULT_TEXT, DEFAULT_HEADER, { lifeTime: 2000 });
+    toaster.addToast(DEFAULT_TEXT, DEFAULT_HEADER, {
+      type: TOAST_TYPES.DEFAULT,
+      lifeTime: 2000,
+    });
   };
   const showInfoToast = () => {
     toaster.addToast(DEFAULT_TEXT, DEFAULT_HEADER, {
