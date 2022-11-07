@@ -15,12 +15,17 @@ const ruleFunctions = {
     });
     return result;
   },
+  isPositiveIntegerOrZero: (value) => {
+    return Number.isInteger(+value) && value >= 0;
+  },
 };
 
 const ruleErrors = {
   isNotEmpty: (label) => `Field "${label}" is required`,
   isIndentSize: (label) =>
     `Field "${label}" may contain only numbers, spaces and constants "sm", "md" or "lg". 1-4 params.`,
+  isPositiveIntegerOrZero: (label) =>
+    `Field "${label}" must be integer number >= 0`,
 };
 
 export const validate = (label, value, rules) => {

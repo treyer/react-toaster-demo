@@ -3,6 +3,7 @@ import { TextInputPanel } from "../TextInputPanel";
 import { IndentsInputPanel } from "../IndentsInputPanel";
 import { ColorPanel } from "../ColorPanel";
 import { ToastRadioGroup } from "../ToastRadioGroup";
+import { LifeTimeInputPanel } from "../LifeTimeInputPanel";
 
 import { POSITION_TYPE } from "../../constants/positions";
 import { TOAST_TYPES } from "../../constants/toastTypes";
@@ -29,6 +30,7 @@ function SettingsMenu() {
         action={changeContainerPosition}
       />
       <TextInputPanel />
+      <LifeTimeInputPanel />
       <ToastRadioGroup
         id="toast-type-label"
         name="toast-type"

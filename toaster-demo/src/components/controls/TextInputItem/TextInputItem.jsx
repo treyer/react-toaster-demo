@@ -7,7 +7,15 @@ import { Input, Wrapper } from "./components";
 import { SIZE_LARGE, SIZE_SMALL } from "../../../constants/sizes";
 import { validate } from "../../../helpers/validate";
 
-function TextInputItem({ id, size, label, storePropName, rules, action }) {
+function TextInputItem({
+  id,
+  size,
+  label,
+  storePropName,
+  inputType,
+  rules,
+  action,
+}) {
   const dispatch = useDispatch();
   const storeValue = useSelector((state) => state.settings[storePropName]);
   const [isError, setIsError] = useState(false);
@@ -15,8 +23,6 @@ function TextInputItem({ id, size, label, storePropName, rules, action }) {
 
   const handleChangeValue = (event) => {
     const value = event.target.value;
-    dispatch(action(value));
-
     const error = validate(label, value, rules);
     if (error) {
       setIsError(true);
@@ -26,6 +32,13 @@ function TextInputItem({ id, size, label, storePropName, rules, action }) {
         setIsError(false);
         setErrorMessage("");
       }
+    }
+    if (inputType === "positiveNumber") {
+      if (Number.isInteger(+value) && value >= 0) {
+        dispatch(action(+value));
+      }
+    } else {
+      dispatch(action(value));
     }
   };
 
@@ -49,6 +62,7 @@ TextInputItem.propTypes = {
   size: PropTypes.oneOf([SIZE_SMALL, SIZE_LARGE]),
   label: PropTypes.string.isRequired,
   storePropName: PropTypes.string.isRequired,
+  inputType: PropTypes.string,
   rules: PropTypes.arrayOf(PropTypes.string),
   action: PropTypes.func.isRequired,
 };
