@@ -17,6 +17,7 @@ import {
 } from "../actions/settings";
 import {
   ANIMATION_TYPES,
+  DEFAULT_TEXT,
   HIDE_TO,
   POSITION_TYPE,
   SHOW_FROM,
@@ -24,9 +25,9 @@ import {
 } from "../../constants";
 
 const INITIAL_STATE = {
-  containerPosition: POSITION_TYPE.TOP_LEFT,
-  text: "Hello from toast!!!",
-  headerText: "Awesome header",
+  containerPosition: POSITION_TYPE.TOP_RIGHT,
+  text: DEFAULT_TEXT,
+  headerText: "",
   type: TOAST_TYPES.DEFAULT,
   lifeTime: 0,
   showFrom: SHOW_FROM.RIGHT,
